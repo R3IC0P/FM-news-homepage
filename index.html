@@ -9,19 +9,38 @@
         <title>Frontend Mentor | News homepage</title>
 
         <link rel="stylesheet" href="style.css" />
+
+        <script src="./script.js" defer></script>
     </head>
     <body>
         <header class="topbar">
             <img src="./assets/images/logo.svg" alt="" class="topbar__logo" />
-            <button class="topbar__menu-toggle js-menu-toggle" aria-label="menu toggle button">
+            <button class="topbar__menu-open js-menu-open" aria-label="menu open button">
                 <img src="./assets/images/icon-menu.svg" alt="" />
             </button>
-            <nav class="topbar__nav">
-                <a href="#" class="topbar__nav-link">Home</a>
-                <a href="#" class="topbar__nav-link">New</a>
-                <a href="#" class="topbar__nav-link">Popular</a>
-                <a href="#" class="topbar__nav-link">Trending</a>
-                <a href="#" class="topbar__nav-link">Categories</a>
+            <nav class="topbar__nav js-topbar-nav">
+                <div class="topbar__nav-wrapper">
+                    <button class="topbar__menu-close js-menu-close" aria-label="menu close button">
+                        <img src="./assets/images/icon-menu-close.svg" alt="" />
+                    </button>
+                    <ul class="topbar__links">
+                        <li>
+                            <a href="#" class="topbar__link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="topbar__link">New</a>
+                        </li>
+                        <li>
+                            <a href="#" class="topbar__link">Popular</a>
+                        </li>
+                        <li>
+                            <a href="#" class="topbar__link">Trending</a>
+                        </li>
+                        <li>
+                            <a href="#" class="topbar__link">Categories</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <main>
@@ -39,19 +58,25 @@
                 <h3>New</h3>
                 <div class="newest-articles__list">
                     <section class="newest-articles__article">
-                        <h4>Hydrogen VS Electric Cars</h4>
+                        <h4>
+                            <a href="#">Hydrogen VS Electric Cars</a>
+                        </h4>
                         <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
                     </section>
                     <div class="separator"></div>
                     <section class="newest-articles__article">
-                        <h4>The Downsides of AI Artistry</h4>
+                        <h4>
+                            <a href="#">The Downsides of AI Artistry</a>
+                        </h4>
                         <p>
                             What are the possible adverse effects of on-demand AI image generation?
                         </p>
                     </section>
                     <div class="separator"></div>
                     <section class="newest-articles__article">
-                        <h4>Is VC Funding Drying Up?</h4>
+                        <h4>
+                            <a href="#">Is VC Funding Drying Up?</a>
+                        </h4>
                         <p>
                             Private funding by VC firms is down 50% YOY. We take a look at what that
                             means.
@@ -64,7 +89,9 @@
                     <img src="./assets/images/image-retro-pcs.jpg" alt="retro pc" />
                     <div>
                         <h3>01</h3>
-                        <h4>Reviving Retro PCs</h4>
+                        <h4>
+                            <a href="#">Reviving Retro PCs</a>
+                        </h4>
                         <p>What happens when old PCs are given modern upgrades?</p>
                     </div>
                 </section>
@@ -74,7 +101,9 @@
                         alt="keyboard with red highlight" />
                     <div>
                         <h3>02</h3>
-                        <h4>Top 10 Laptops of 2022</h4>
+                        <h4>
+                            <a href="#">Top 10 Laptops of 2022</a>
+                        </h4>
                         <p>Our best picks for various needs and budgets.</p>
                     </div>
                 </section>
@@ -82,7 +111,9 @@
                     <img src="./assets/images/image-gaming-growth.jpg" alt="hand and gamepad" />
                     <div>
                         <h3>03</h3>
-                        <h4>The Growth of Gaming</h4>
+                        <h4>
+                            <a href="#">The Growth of Gaming</a>
+                        </h4>
                         <p>How the pandemic has sparked fresh opportunities.</p>
                     </div>
                 </section>
