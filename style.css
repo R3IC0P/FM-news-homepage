@@ -32,6 +32,8 @@
 body {
     display: grid;
     gap: var(--20px);
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 16px;
     font-family: 'Inter';
     background-color: var(--color-ceutral-100);
@@ -99,6 +101,7 @@ body {
     display: block;
     padding: 12px 0;
     text-decoration: none;
+    font-family: 'Inter';
     font-size: var(--18px);
     color: var(--color-neutral-800);
 }
@@ -118,8 +121,13 @@ main img {
     color: var(--color-neutral-800);
 }
 
+.promoted-article__img--desktop {
+    display: none;
+}
+
 .promoted-article__intro {
     font-size: var(--15px);
+    font-weight: 500;
     color: var(--color-neutral-400);
 }
 
@@ -218,4 +226,98 @@ footer {
 
 footer a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 50rem) {
+    .topbar__menu-open,
+    .topbar__menu-close {
+        display: none;
+    }
+
+    .topbar__nav,
+    .topbar__nav-wrapper {
+        all: unset;
+    }
+
+    .topbar__links {
+        margin-top: 0;
+        display: flex;
+        gap: 40px;
+    }
+
+    .topbar__link {
+        color: var(--color-neutral-400);
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 16px;
+        padding: 16px 0;
+    }
+
+    .promoted-article__img--mobile {
+        display: none;
+    }
+
+    .promoted-article__img--desktop {
+        display: block;
+    }
+
+    .promoted-article__content {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 1fr auto;
+        margin-top: 32px;
+    }
+
+    .promoted-article__title {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        padding: 0;
+        font-size: calc(72rem / 16);
+    }
+
+    .promoted-article__intro {
+        font-size: var(--20px);
+        line-height: 1.75;
+    }
+
+    .promoted-article__btn,
+    .newest-articles {
+        margin: 0;
+    }
+
+    .newest-articles h3 {
+        font-size: calc(48rem / 16);
+    }
+
+    .newest-articles h4 {
+        font-size: calc(40rem / 16);
+    }
+
+    .newest-articles__article p {
+        font-size: var(--20px);
+    }
+
+    .top-articles {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .top-articles__article {
+        flex-grow: 1;
+        flex-basis: 0;
+        margin: 0;
+    }
+
+    .top-articles__article h4 {
+        margin: 16px 0;
+    }
+
+    .top-articles__article p {
+        font-size: var(--18px);
+    }
 }
